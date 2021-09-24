@@ -1,0 +1,43 @@
+#divHost {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+header {
+  background: #5851ff;
+  display: flex;
+  height: 80px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+main {
+  display: flex;
+  background: white;
+  padding: 100px;
+}
+
+.card-deck {
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+
+h1 {
+  color: white;
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+footer {
+  background: #5851ff;
+  color: white;
+  display: flex;
+  height: 66px;
+}
+
+footer p {
+  margin: auto;
+}
