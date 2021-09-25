@@ -14,7 +14,7 @@
   "types": "./dist/types/components.d.ts",
   "scripts": {
     "init": "echo \"Already initialized!\"",
-    "start": "node .scripts/check-results && stencil build --dev --watch --serve && npm run storybook",
+    "start": "node .scripts/check-results && stencil build && npm run storybook",
     "build": "node .scripts/check-results && stencil build && npm run storybook:build",
     "storybook": "stencil build --watch & start-storybook -p 6006 -s ./dist",
     "storybook:build": "npm run test:generate-output && build-storybook -s ./dist",
@@ -24,10 +24,11 @@
     "test:generate-output": "stencil test --spec --e2e --json --outputFile=.jest-test-results.json --passWithNoTests",
     "generate": "node .scripts/component",
     "lint": "npm run lint:code && npm run lint:style",
-    "lint:fix": "npm run lint:code:fix",
+    "lint:fix": "npm run lint:code:fix && npm run lint:style:fix",
     "lint:code": "eslint \"./**/*.ts\" \"./**/*.tsx\" \"./**/*.js\"",
     "lint:code:fix": "eslint \"./**/*.ts\" \"./**/*.tsx\" \"./**/*.js\" --fix",
     "lint:style": "stylelint \"./**/*.css\" \"./**/*.scss\"",
+    "lint:style:fix": "stylelint \"./**/*.css\" \"./**/*.scss\" --fix",
     "release": "semantic-release"
   },
   "devDependencies": {

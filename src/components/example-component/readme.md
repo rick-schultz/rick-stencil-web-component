@@ -1,5 +1,4 @@
-# app-root
-
+# example-component
 
 
 <!-- Auto Generated Below -->
@@ -23,8 +22,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  app-root --> app-card
-  style app-root fill:#f9f,stroke:#333,stroke-width:4px
+  example-component --> app-card
+  style example-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

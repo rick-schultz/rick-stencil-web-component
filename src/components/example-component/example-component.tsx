@@ -1,18 +1,20 @@
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'app-root',
-  styleUrl: 'app-root.scss',
+  tag: 'example-component',
+  styleUrl: 'example-component.scss',
   shadow: true,
+  assetsDirs: ['assets'],
 })
-export class AppRoot {
+export class ExampleComponent {
   @Prop() imageOne = 'logoVI.png';
 
   @Prop() imageTwo = 'logoStencil.png';
 
   @Prop() imageThree = 'logoReact.png';
 
-  render() {
+  // eslint-disable-next-line class-methods-use-this
+  public render(): JSX.Element {
     return (
       <div id="divHost">
         <header>

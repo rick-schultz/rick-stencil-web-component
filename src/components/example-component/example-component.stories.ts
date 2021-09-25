@@ -1,17 +1,17 @@
-import { jsxDecorator } from 'storybook-addon-jsx';
 import readme from './readme.md';
 
 // eslint-disable-next-line import/no-default-export
 export default {
-  title: 'app-root',
+  title: 'example-component',
   parameters: {
     docs: { description: { component: readme } },
     jest: [
+      'example-component.spec.tsx',
+      'example-component.e2e.ts',
     ],
   },
-  decorators: [jsxDecorator],
 };
 
 export const empty = (): string => `
-  <app-root></app-root>
+  <example-component></example-component>
 `;
