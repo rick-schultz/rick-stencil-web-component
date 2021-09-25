@@ -45,3 +45,44 @@ footer {
 footer p {
   margin: auto;
 }
+
+.app-card {
+  background: rgb(134,156,190);
+  background: radial-gradient(circle, rgba(134,156,190,1) 0%, rgba(78,111,160,1) 53%, rgba(67,102,154,1) 100%);
+  height: 500px;
+  width: 350px;
+  border-radius: 50px 15px;
+  box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.356);
+  display: flex;
+  align-items: center
+}
+
+ .app-card:hover {
+ filter: brightness(0.9);
+ box-shadow: 5px 10px 20px 0 rgba(0, 0, 0, 0.438);
+}
+
+.app-card p:first-of-type{
+  text-align: center;
+  font-size:x-large;
+  font-weight: 700;
+  color: white;
+}
+
+.app-card img{
+  width:132px;
+  margin: auto;
+  display: block;
+  padding: 15px;
+}
+
+.app-card p:last-of-type{
+  color: rgb(0, 32, 42);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  font-weight: lighter;
+  text-align: justify;
+  font-size: large;
+  line-height: 1.5;
+}

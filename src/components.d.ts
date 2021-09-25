@@ -6,24 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppCard {
-        "cardText": string;
-        "cardTitle": string;
-        "imgUrl": string;
-    }
     interface ExampleComponent {
-        "imageOne": string;
-        "imageThree": string;
-        "imageTwo": string;
     }
 }
 declare global {
-    interface HTMLAppCardElement extends Components.AppCard, HTMLStencilElement {
-    }
-    var HTMLAppCardElement: {
-        prototype: HTMLAppCardElement;
-        new (): HTMLAppCardElement;
-    };
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
     }
     var HTMLExampleComponentElement: {
@@ -31,23 +17,13 @@ declare global {
         new (): HTMLExampleComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "app-card": HTMLAppCardElement;
         "example-component": HTMLExampleComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppCard {
-        "cardText"?: string;
-        "cardTitle"?: string;
-        "imgUrl"?: string;
-    }
     interface ExampleComponent {
-        "imageOne"?: string;
-        "imageThree"?: string;
-        "imageTwo"?: string;
     }
     interface IntrinsicElements {
-        "app-card": AppCard;
         "example-component": ExampleComponent;
     }
 }
@@ -55,7 +31,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-card": LocalJSX.AppCard & JSXBase.HTMLAttributes<HTMLAppCardElement>;
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
         }
     }
